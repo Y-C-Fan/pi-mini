@@ -8,7 +8,7 @@
 
 ## 参考基准
 
-上游仓库：`https://github.com/earendil-works/pi`（本方案对照 v1.4.0）。
+上游仓库：`https://github.com/earendil-works/pi`（本方案对照 v1.5.0）。
 架构总纲读 `docs/how-pi-works.md`，四段：agent loop、context、session、interfaces。
 格式细节读 `docs/session-format.md`、`docs/compaction.md`、`docs/cli.md`。
 本地也可直接看装好的 npm 包 `@earendil-works/pi-coding-agent` 里的 `docs/`，与上游同源。
