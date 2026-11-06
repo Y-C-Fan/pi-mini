@@ -3,4 +3,4 @@ __pycache__/
 *.py[cod]
 .env
 .pi-mini/
-notes/*.local.md
+docs/notes/*.local.md
