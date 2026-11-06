@@ -39,17 +39,22 @@ src/pi_mini/
   agent/        agent loop、状态机、消息模型            [P1]
   tools/        工具注册表与四个内置工具                [P1]
   session/      JSONL 会话树、分支、压缩               [P2 P3]
-  modes/        interactive / print / json / rpc       [P4 P5]
+  modes/        interactive / print / json / rpc       [P4 P5 选做]
+tests/
+  fixtures/     真实抓取的 SSE 流与请求体          [P0 起用]
+  test_fixture_replay.py  回放用例（当前全 skip）
 ```
 
 ## 进度
+
+P0–P3 必做，全部勾上就算项目完成；P4、P5 选做，不进完成标准。
 
 - [ ] P0 最小可跑：流式对话
 - [ ] P1 agent loop + 工具
 - [ ] P2 session 树
 - [ ] P3 上下文工程 + 压缩
-- [ ] P4 交互模式
-- [ ] P5 扩展面
+- [ ] P4 交互模式（选做）
+- [ ] P5 扩展面（选做）
 
 ## 笔记
 

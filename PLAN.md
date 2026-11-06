@@ -1,10 +1,10 @@
 # pi-mini 学习计划
 
-一句话：六个阶段，每阶段一个能跑的产物，按 Pi 的真实骨架分层实现。
+一句话：六个阶段，P0–P3 必做、P4–P5 选做，每阶段一个能跑的产物，按 Pi 的真实骨架分层实现。
 什么时候读：每次开工前读当前阶段段落；阶段验收通过再进下一段。
 层级：002，上级入口 README.md。
 
-## 基准事实（先读，别猜）
+## 基准事实
 
 上游 Pi v1.5.0（github.com/earendil-works/pi），架构总纲 `docs/how-pi-works.md`。
 它的 agent loop 是这样一句话：消息进入 active branch → 用 system prompt + 分支历史 + 工具定义组请求 → provider 流式返回 text 与 tool_calls → 记录响应 → 执行每个 tool call → 记录结果 = 一个 turn → 还有待办就再来一个 turn。
@@ -38,7 +38,7 @@
 学到：模型看到什么完全由 harness 决定；压缩是「插入」而非「删除」。
 验收：20 轮以上长任务不断线；用 `--debug-context` 打印每次请求的消息条数与 token。
 
-## P4 交互模式（1~2 天）
+## P4 交互模式（选做，1~2 天）
 
 产物：REPL，流式渲染、Ctrl-C 中断、消息排队。
 做：prompt_toolkit 输入；流式渲染；运行状态机 idle/running/aborting；steering 消息插在 assistant turn 之后；follow-up 消息等任务结束再进；中断后把未发消息还给编辑器。

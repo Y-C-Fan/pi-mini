@@ -5,6 +5,9 @@ description = "Hand-written mini reimplementation of the Pi agent harness, for l
 requires-python = ">=3.11"
 dependencies = []
 
+[dependency-groups]
+dev = ["pytest>=8"]
+
 [project.scripts]
 pi-mini = "pi_mini.cli:main"
 
