@@ -6,7 +6,7 @@
 
 ## 基准事实（先读，别猜）
 
-Pi 本机版本 v1.4.0，文档 `docs/how-pi-works.md`。
+上游 Pi v1.4.0（github.com/earendil-works/pi），架构总纲 `docs/how-pi-works.md`。
 它的 agent loop 是这样一句话：消息进入 active branch → 用 system prompt + 分支历史 + 工具定义组请求 → provider 流式返回 text 与 tool_calls → 记录响应 → 执行每个 tool call → 记录结果 = 一个 turn → 还有待办就再来一个 turn。
 会话是树，不是数组。JSONL 每行一个 entry，带 id 和 parent。压缩是往树里插一条 summary entry，旧 entry 不删。
 

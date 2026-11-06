@@ -8,10 +8,11 @@
 
 ## 参考基准
 
-本机已装 Pi v1.4.0，源码与文档在：
-`D:\DevEnv\node_global\node_modules\@earendil-works\pi-coding-agent`
-重点读 `docs/how-pi-works.md`（agent loop、context、session、interfaces 四段）。
-不要凭印象设计，拿它的行为对照自己的实现。
+上游仓库：`https://github.com/earendil-works/pi`（本方案对照 v1.4.0）。
+架构总纲读 `docs/how-pi-works.md`，四段：agent loop、context、session、interfaces。
+格式细节读 `docs/session-format.md`、`docs/compaction.md`、`docs/cli.md`。
+本地也可直接看装好的 npm 包 `@earendil-works/pi-coding-agent` 里的 `docs/`，与上游同源。
+设计一律以上游实现为准：禁凭印象、禁二手博客。
 
 Pi 的骨架只有五件事：
 1. agent loop —— 请求、流式响应、执行工具、再请求。
